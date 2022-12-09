@@ -40,6 +40,21 @@ header {
     margin: 0px;
     padding-top: 90px;
 }
+@media (max-width: 767px) {
+    .homeContainer {
+        padding-top: 0px;
+    }
+}
+.img-responsive{
+width: 100%;}
+@media (max-width: 767px) {
+    .img-responsive {
+        width:100%;
+        margin: 0 auto;
+        border-radius: 400px;
+    }
+}
+
 
 .headerContainer {
     width: 100%;
@@ -418,6 +433,12 @@ header {
     border: 2px solid #fff;
     border-radius: 10px;
 }
+@media (max-width: 768px) {
+    .slick-slide img {
+        height: 145px;
+
+    }
+}
 
 .wrapper .slick-dots li button:before {
     font-size: 12px;
@@ -437,6 +458,7 @@ header {
     width: 100%;
     display: flex;
     align-items: baseline;
+    flex-direction:column;
 }
 
 /*Tabs*/
@@ -467,10 +489,12 @@ section {
 
 #tabs .nav-tabs {
     border-bottom: 0px !important;
+    display: flex;
 }
 
 #tabs .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
+
     color: #182128;
     background-color: transparent;
     border-bottom: 4px solid #00D5D5 !important;
@@ -479,6 +503,13 @@ section {
     font-weight: bold;
     width: 279px;
 }
+@media (max-width: 768px) {
+    #tabs .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
+        display: flex;
+        width:100%;
+    }
+}
 
 #tabs .nav-tabs .nav-link {
     border: 1px solid transparent;
@@ -486,6 +517,12 @@ section {
     border-top-right-radius: .25rem;
     color: #182128;
     font-size: 20px;
+}
+@media (max-width: 768px) {
+    #tabs .nav-tabs .nav-link {
+        display: flex;
+        align-items: center;
+    }
 }
 
 #tabs .nav-fill .nav-item {
@@ -549,6 +586,7 @@ section {
     line-height: 20px;
 }
 
+
 .block {
 
     margin: 0;
@@ -558,17 +596,12 @@ section {
     cursor: default;
     border-radius: .25rem .25rem .25rem;
     -moz-border-radius: .25rem .25rem .25rem
+    display:flex;
 }
 
-.block:after,
-.block:before {
-    display: table;
-    content: "";
-}
 
-.block:after {
-    clear: both;
-}
+
+
 
 a>.block {
     cursor: pointer;
@@ -582,6 +615,12 @@ a>.block {
 @media (max-width: 991px) {
     .block-stack-wrapper .row {
         margin-bottom: 20px
+    }
+}
+
+@media (max-width: 767px) {
+    .fixed-top {
+        display: none
     }
 }
 
@@ -715,6 +754,11 @@ a>.block {
     /*border: 0.09em solid #80888F;*/
 
 }
+@media (max-width: 768px) {
+    .gallery-wrap .img-big-wrap img {
+        min-height: auto;
+    }
+}
 
 
 
@@ -809,13 +853,33 @@ a>.block {
     color: #00D5D5;
 }
 
+.plusButton{
+    width: 28px;
+    height: 28px;
+    background: #00D5D5;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    margin-bottom: 8px;
+        font-size: 20px;
+        color: black;
 
+}
 .product-description {
     width: 100%;
     padding-top: 40px;
     padding-right: 40px;
     padding-left: 40px;
     margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .product-description {
+        padding-top: 0px;
+
+    }
 }
 
 
@@ -847,6 +911,7 @@ a>.block {
     flex-direction: column;
     justify-content: flex-start;
 }
+
 
 .card-similar .card-similar-title {
     font-weight: 600;
@@ -976,17 +1041,64 @@ a>.block-similar {
     width: 100%;
     margin-top: 20px;
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
     /*position: sticky;*/
 }
+@media (max-width: 768px) {
+    .footer-page {
+display: none;
+    }
+}
 
+@media (min-width: 768px) {
+    .card-similar {
+        padding:36px;
+    }
+}
 .footer-content {
     display: flex;
     justify-content: center;
 }
+.bottomMenu{
+    display: none;
+}
 
+@media (max-width: 768px) {
+    .bottomMenu {
+    background-color: #182128;
+  position: fixed;
+  bottom: 0;
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+   }
+}
+.bottomLink{
+    color: #80888F;
+font-weight: 500;
+font-size: 8px;
+line-height: 15px;
+    text-decoration: none;
+}
+.linkImg{
+    width: 18px;
+    height: 22px;
+}
+.linkImg1{
+    width: 22px;
+    height: 20px;
+    }
+    .linkImg2{
+    width: 22px;
+    height: 22px;
+    }
+.linkBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 .footer-page .footer-left {
     display: flex;
     align-items: center;
@@ -1164,9 +1276,6 @@ a>.block-similar {
   }
   
  
-
-
-  /* User Profile Right - Content */
 
 .navTabFlex-profile {
     width: 100%;
@@ -1820,6 +1929,7 @@ a>.block-profile{
 		margin-bottom:15px;
 	}
 }
+
 
 
 /*Style Notification Profile*/

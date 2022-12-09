@@ -19,7 +19,7 @@
         </div>
 
 
-        <img class="profile_pic" src="{{ image.image.url }}" alt="" height="160px" style="margin-left: 75px;">
+        <img class="profile_pic" src="{{ image.image.url }}" alt="" height="160px" style="margin: 0 auto;" >
         <a href="{% url "oursite:profilee" %}"><p class="side-menu">Мои объявления</p></a>
         <a href="{% url "oursite:profile_buying" %}"><p class="side-menu">Мои заказы</p></a>
         <a href="{% url "cart:cart_detail" %}"> <p class="side-menu">Избранное</p></a>
@@ -157,7 +157,9 @@
     }
 
     .settings{
-    width: 309px;
+        width: 100%;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     background-color: #FFF;
@@ -165,7 +167,6 @@
 
     .product1{
     text-align: left;
-    width: 1000px;
 
     position: relative;
     margin: 20px auto;

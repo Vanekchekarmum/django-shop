@@ -116,7 +116,7 @@
         </div>
 
 
-        <img class="profile_pic" src="{{ image.image.url }}" alt="" height="160px" style="margin-left: 75px;">
+        <img class="profile_pic" src="{{ image.image.url }}" alt="" height="160px" >
         <a href="{% url "oursite:profilee" %}"><p class="side-menu">Мои объявления</p></a>
         <a href="{% url "oursite:profile_buying" %}"><p class="side-menu">Мои заказы</p></a>
         <a href="{% url "cart:cart_detail" %}"> <p class="side-menu">Избранное</p></a>
@@ -270,8 +270,6 @@
 
     .product1{
     text-align: left;
-    width: 1000px;
-
     position: relative;
     margin: 20px auto;
     margin-top: 10px;

@@ -440,7 +440,29 @@ input[name='jobtype'] {
                         </div>
                     </div>
                 </div>
+
             </footer>
+        <footer class="bottomMenu">
+
+                        <div class="linkBox">
+                <img  src="{% static 'images/hert.png' %}" class="linkImg1" alt="icon">
+            <a class="bottomLink" href="{% url 'cart:cart_detail' %}">Избранное</a>
+            </div>
+            <div class="linkBox">
+                <img  src="{% static 'images/lots.png' %}" class="linkImg2" alt="icon">
+                <a class="bottomLink" href="/">Объявления</a>
+            </div>
+            <a href="{% url 'oursite:profile' %}" class="plusButton" href="/">+</a>
+            <div class="linkBox">
+             <img  src="{% static 'images/chats.png' %}" class="linkImg1" alt="icon">
+            <a href="{% url 'oursite:dialogs' %}"  class="bottomLink" href="/">Сообщения</a>
+            </div>
+            <div  class="linkBox">
+             <img  src="{% static 'images/user.png' %}" class="linkImg" alt="icon">
+
+            <a href="{% url 'oursite:profile_manage' %}" class="bottomLink" href="/">Профиль</a>
+                </div>
+        </footer>
     </section>
 
 
