@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
+from django.http import JsonResponse
 
 # Create your views here.
 from django.shortcuts import render, redirect, get_object_or_404
@@ -28,6 +29,10 @@ def cart_add(request, product_id):
                  update_quantity=cd['update'])
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
+
+def my_view(request):
+    questions = Cart.objects.all()
+    return JsonResponse({'questions': questions})
 
 def cart_remove(request, product_id):
     cart = Cart(request)

@@ -16,9 +16,9 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 print(BASE_DIR)
 
-SESSION_COOKIE_SAMESITE = None
+SESSION_COOKIE_SAMESITE = False
 
-CSRF_COOKIE_SAMESITE = None
+CSRF_COOKIE_SAMESITE = False
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -66,7 +66,6 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -165,9 +164,9 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, "static"),
-]
+# STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, "static"),
+# ]
 
 CART_SESSION_ID = 'cart'
 

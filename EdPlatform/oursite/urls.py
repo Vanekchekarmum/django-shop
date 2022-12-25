@@ -2,6 +2,8 @@ from django.contrib.auth.decorators import login_required
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.decorators.csrf import csrf_exempt
+
 from . import views
 from django.conf.urls import url
 from django.views.generic import RedirectView
@@ -10,8 +12,18 @@ app_name = 'oursite'
 
 urlpatterns = [
     # path('', views.index, name='index'),
-    path('buy/', views.product_list_buy, name='buy'),
+    path('api/subjects/', views.Lol.as_view(), name='subjects'),
+    path('api/notif/', views.ShowNotifications.as_view(), name='notif'),
+    path('api/users/', views.AllUsersView.as_view()),
+    path('api/createuser/', views.CreateUser.as_view()),
+    path('api/posts/', views.ShowPosts.as_view()),
 
+    path('api/login/', csrf_exempt(views.AuthView.as_view())),
+    path('api/constructors/', views.ShowConstructor.as_view()),
+    path('api/constructorsby/', views.ShowConstructorOfOwner.as_view()),
+    path('api/userimages/', views.ShowImageUser.as_view()),
+    path('api/messages/', views.ShowMessages.as_view()),
+    path('buy/', views.product_list_buy, name='buy'),
     path('register/', views.register, name='register'),
     path('razrab/', views.razrab, name='razrab'),
     path('logout/', views.logout, name='logout'),
